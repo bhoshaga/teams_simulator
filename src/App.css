@@ -1,0 +1,303 @@
+/* General Layout */
+.app-container {
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Login Styles */
+.teams-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.user-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Meeting Selector Styles */
+.teams-meeting-selector {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.meeting-controls {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.create-meeting, .join-meeting {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.meetings-list {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meeting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.meeting-details {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.meeting-status {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.meeting-status.active {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.meeting-status.ended {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+/* Meeting Room Styles */
+.teams-meeting {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meeting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.connection-status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.connection-status.connected {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.connection-status.disconnected {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.connection-status.error {
+  background: #fef7e0;
+  color: #b06000;
+}
+
+.chat-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.message.streaming {
+  border: 1px solid #b8daff;
+  background: #f0f7ff;
+}
+
+.message-speaker {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.message-timestamp {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.message-controls {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.message-controls input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Debug Panel Styles */
+.debug-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.debug-stats {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.debug-logs {
+  flex: 1;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.log-entry {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.log-entry.error {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.log-entry.warning {
+  background: #fef7e0;
+  color: #b06000;
+}
+
+.log-entry.success {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.log-timestamp {
+  color: #666;
+  margin-right: 8px;
+}
+
+/* Utility Classes */
+.error-message {
+  background: #fce8e6;
+  color: #c5221f;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Button Styles */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background: #1557b0;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+button.end-meeting {
+  background: #dc3545;
+}
+
+button.end-meeting:hover {
+  background: #c82333;
+}
+
+/* Input Styles */
+input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
